@@ -1,4 +1,5 @@
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
 
 jobs:
   create_repo:
@@ -8,3 +9,6 @@ jobs:
     - uses: ./.github/actions/create-repo
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        repo-deploy-key: ${{ secrets.TARGET_DEPLOY }}
+        repo-owner: 'hectorsector'
+        repo-name: 'ubiquitous-octo-potato'
