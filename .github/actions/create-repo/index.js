@@ -1,8 +1,11 @@
 const core = require('@actions/core')
 const github = require('@actions/github')
 
+const token = core.getInput("github-token")
+const octokit = github.getOctokit(token)
+
 try {
-  github.repos.createForAuthenticatedUser({
+  octokit.repos.createForAuthenticatedUser({
     name: 'hectors-test'
   })
 } catch (error) {

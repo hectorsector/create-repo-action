@@ -1,6 +1,11 @@
 name: 'Push branch to a new repo'
 description: 'Pushes a branch to a new repository'
 
+inputs:
+  github-token:
+    description: 'The github token'
+    required: true
+
 runs:
   using: 'node12'
   main: 'index.js'
