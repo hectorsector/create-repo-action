@@ -5,7 +5,7 @@ const token = core.getInput("github-token")
 const octokit = github.getOctokit(token)
 
 try {
-  octokit.repos.createForAuthenticatedUser({
+  await octokit.repos.createForAuthenticatedUser({
     name: 'hectors-test'
   })
 } catch (error) {
