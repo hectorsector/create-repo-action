@@ -1,0 +1,7 @@
+name: 'Push branch to a new repo'
+description: 'Pushes a branch to a new repository'
+inputs:
+outputs:
+runs:
+  using: 'node12'
+  main: 'index.js'

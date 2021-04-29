@@ -1,0 +1,7 @@
+on: [workflow_dispatch]
+
+jobs:
+  create_repo:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ./.github/actions/create-repo
