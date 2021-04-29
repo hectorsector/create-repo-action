@@ -5,7 +5,7 @@ const token = core.getInput("github-token")
 const deploy_key = core.getInput("repo-deploy-key")
 const target_owner = core.getInput("repo-owner")
 const target_repo = core.getInput("repo-name")
-const targetOctokit = core.getOctokit(deploy_key)
+const targetOctokit = github.getOctokit(deploy_key)
 const octokit = github.getOctokit(token)
 
 async function run() {
